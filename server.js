@@ -5,7 +5,7 @@ const express = require('express') // import the express framework
 const morgan = require('morgan') // import the morgan request logger
 require('dotenv').config() // Load my ENV file's variables
 const path = require('path') // import path module
-const GemRouter = require('./controllers/gemControllers.')
+const GemRouter = require('./controllers/gemControllers')
 const UserRouter = require('./controllers/userControllers')
 const CommentRouter = require('./controllers/commentControllers')
 const middleware = require('./utils/middleware')
