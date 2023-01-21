@@ -35,8 +35,11 @@ middleware(app)
 /////////////////////////////////////
 // HOME route
 app.get('/', (req, res) => {
-    res.render('home.liquid')
+    // destructure our user info
+    const { username, loggedIn, userId } = req.session
+    res.render('home.liquid', { username, loggedIn, userId })
 })
+
 
 // This is now where we register our routes, this is how server.js knows to send the correc response. 
 // app.use, when we register a route, needs two arguments

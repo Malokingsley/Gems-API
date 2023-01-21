@@ -42,7 +42,7 @@ const Gem = require('./gems')
 const db = mongoose.connection
 
 db.on('open', () => {
-    // array of starter resources(fruits)
+    // array of starter resources(gems)
 
     const startGems = [
             { name: 'Amethyst', color: 'purple', easyToFind: true },

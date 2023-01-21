@@ -1,0 +1,39 @@
+{% layout 'layout.liquid' %}
+{% block content %}
+  <div class="container-sm">
+    <form action="/gems/{{gem.id}}?_method=PUT" method="POST">
+      <fieldset>
+        <legend>Edit {{ gem.name }}</legend>
+        <label class="form-label">Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          placeholder="What kind of fruit is it?"
+          required
+          value="{{ gem.name }}">
+        <label class="form-label">Color:</label>
+        <input
+          type="color"
+          class="form-control"
+          name="color"
+          placeholder="What color is the gem?"
+          required
+          value="{{ gem.color }}">
+        <label class="form-label">Easy to Find:</label>
+        <input
+          type="checkbox"
+          class="form-check-control"
+          name="readyToEat"
+          {% if gem.easyToFind %}
+          checked
+          {% endif %}>
+      </fieldset>
+      <input
+        type="submit"
+        class="btn btn-success"
+        value="Edit {{ gem.name }}">
+      <a href="/fruits/{{ gem.id }}" class="btn btn-warning">Back</a>
+    </form>
+  </div>
+{% endblock %}

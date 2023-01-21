@@ -12,7 +12,7 @@ const commentSchema = require('./comments')
 // we'll destructure the Schema and model functions from mongoose
 const { Schema, model } = mongoose
 
-// fruits schema
+// gems schema
 const gemSchema = new Schema({
     name: {
         type: String
